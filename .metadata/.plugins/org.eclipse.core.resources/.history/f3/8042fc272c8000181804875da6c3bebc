@@ -1,0 +1,49 @@
+<%@ page import="java.util.*, com.luv2code.web.jdbc.*" %>
+<html>
+<head>
+<title>Student Tracker App</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+
+<%
+
+	List<Student> theStudents = (List<Student>) request.getAttribute("STUDENT_LIST");
+%>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h2>FooBar University</h2>
+		
+		</div>
+		
+	
+	</div>
+	
+	<div id="container">
+		<div id="content">
+			<table>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+				</tr>
+				
+				<% for (Student theStudent : theStudents) { %>
+				<tr>
+					<td> <%=theStudent.getFirstName() %> </td>
+					<td> <%=theStudent.getLastName() %> </td>
+					<td> <%=theStudent.getEmail() %> </td>
+				</tr>
+				
+				<% } %>
+			
+			
+			</table>
+		</div>
+	
+	
+	</div>
+
+</body>
+</html>

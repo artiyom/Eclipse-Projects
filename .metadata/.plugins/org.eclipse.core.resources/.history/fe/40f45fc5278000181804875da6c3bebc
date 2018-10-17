@@ -1,0 +1,14 @@
+<%@ page import="java.util.*, com.luv2code.web.jdbc.*" %>
+<html>
+
+
+<%
+
+	List<Student> theStudents = (List<Student>) request.getAttribute("STUDENT_LIST");
+%>
+
+<body>
+
+<%= theStudents %>
+</body>
+</html>
